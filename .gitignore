@@ -1,5 +1,6 @@
-venv/
 __pycache__/
 *.pyc
+venv/
 .DS_Store
+# 如果不想让别人看到你的运行日志，也可以加上
 xxw_emotion/data_logs/
