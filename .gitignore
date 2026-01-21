@@ -1,6 +1,9 @@
-__pycache__/
-*.pyc
+# 忽略所有层级下的缓存文件夹
+**/__pycache__/
+# 忽略根目录下的这些杂物
+data_logs/
+emotions/
+fer2013/
+license.txt
+# 忽略虚拟环境
 venv/
-.DS_Store
-# 如果不想让别人看到你的运行日志，也可以加上
-xxw_emotion/data_logs/
