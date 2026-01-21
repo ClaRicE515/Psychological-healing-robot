@@ -1,0 +1,15 @@
+# 忽略 Python 虚拟环境
+venv/
+__pycache__/
+*.pyc
+
+# 忽略自动生成的数据文件夹（你要求单独储存的文件夹）
+data_logs/
+
+# 忽略 macOS/Linux 系统文件
+.DS_Store
+.idea/
+.vscode/
+
+# (可选) 如果模型文件太大，建议不传 GitHub，在 README 提供链接
+# models/_mini_XCEPTION.102-0.66.hdf5
