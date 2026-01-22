@@ -1,0 +1,10 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/alcony/ros_catkin_ws/devel_isolated/xacro/lib/python3/dist-packages",
+        "/home/alcony/ros_catkin_ws/install_isolated/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/alcony/ros_catkin_ws/devel_isolated/xacro/lib/python3/dist-packages",
+        "/home/alcony/ros_catkin_ws/install_isolated/lib/python3/dist-packages"
+    ]
+}
