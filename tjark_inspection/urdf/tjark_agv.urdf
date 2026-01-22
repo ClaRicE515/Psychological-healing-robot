@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tjark_inspection">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0018956 -0.0084099 0.072818"
+        rpy="0 0 0" />
+      <mass
+        value="6.1208" />
+      <inertia
+        ixx="0.033042"
+        ixy="-4.2406E-06"
+        ixz="-2.8057E-05"
+        iyy="0.026965"
+        iyz="-7.7503E-06"
+        izz="0.053547" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.80784 0.84314 0.90588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_right">
+    <inertial>
+      <origin
+        xyz="3.6776E-15 0.022584 0.00064847"
+        rpy="0 0 0" />
+      <mass
+        value="0.15974" />
+      <inertia
+        ixx="0.00022521"
+        ixy="4.0356E-19"
+        ixz="8.0955E-20"
+        iyy="0.00041908"
+        iyz="5.5667E-06"
+        izz="0.00022537" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_to_base"
+    type="continuous">
+    <origin
+      xyz="0.00044999 -0.19243 -0.012401"
+      rpy="0 0 0.0020937" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_right" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_left">
+    <inertial>
+      <origin
+        xyz="4.5242E-15 -0.022584 0.00064847"
+        rpy="0 0 0" />
+      <mass
+        value="0.15974" />
+      <inertia
+        ixx="0.00022521"
+        ixy="2.9488E-21"
+        ixz="-1.5727E-20"
+        iyy="0.00041908"
+        iyz="-5.5667E-06"
+        izz="0.00022537" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_to_base"
+    type="continuous">
+    <origin
+      xyz="-0.00035578 0.19242 -0.012401"
+      rpy="0 0 0.0020937" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_left" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="wheel_lf">
+    <inertial>
+      <origin
+        xyz="0.018484 -0.00012732 -0.030448"
+        rpy="0 0 0" />
+      <mass
+        value="0.076076" />
+      <inertia
+        ixx="4.0043E-05"
+        ixy="8.24E-08"
+        ixz="1.5107E-05"
+        iyy="5.5058E-05"
+        iyz="-1.1589E-07"
+        izz="3.5163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_to_base"
+    type="fixed">
+    <origin
+      xyz="0.1558 0.12032 -0.0025"
+      rpy="0 0 0.0020943" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lf" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel_rf">
+    <inertial>
+      <origin
+        xyz="0.018484 -0.00012732 -0.030448"
+        rpy="0 0 0" />
+      <mass
+        value="0.076076" />
+      <inertia
+        ixx="4.0043E-05"
+        ixy="8.24E-08"
+        ixz="1.5107E-05"
+        iyy="5.5058E-05"
+        iyz="-1.1589E-07"
+        izz="3.5163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_to_base"
+    type="fixed">
+    <origin
+      xyz="0.1563 -0.11968 -0.0025"
+      rpy="0 0 0.0020943" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rf" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel_lb">
+    <inertial>
+      <origin
+        xyz="-0.018484 0.00012732 -0.030448"
+        rpy="0 0 0" />
+      <mass
+        value="0.076076" />
+      <inertia
+        ixx="4.0043E-05"
+        ixy="8.24E-08"
+        ixz="-1.5107E-05"
+        iyy="5.5058E-05"
+        iyz="1.1589E-07"
+        izz="3.5163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lb_to_base"
+    type="fixed">
+    <origin
+      xyz="-0.1562 0.11967 -0.0025"
+      rpy="0 0 0.0020943" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_lb" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wheel_rb">
+    <inertial>
+      <origin
+        xyz="-0.018484 0.00012732 -0.030448"
+        rpy="0 0 0" />
+      <mass
+        value="0.076076" />
+      <inertia
+        ixx="4.0043E-05"
+        ixy="8.24E-08"
+        ixz="-1.5107E-05"
+        iyy="5.5058E-05"
+        iyz="1.1589E-07"
+        izz="3.5163E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/wheel_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rb_to_base"
+    type="fixed">
+    <origin
+      xyz="-0.1557 -0.12033 -0.0025"
+      rpy="0 0 0.0020943" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_rb" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="-0.0036015 5.8764E-09 -0.030808"
+        rpy="0 0 0" />
+      <mass
+        value="0.21915" />
+      <inertia
+        ixx="0.00016497"
+        ixy="1.8787E-10"
+        ixz="-7.1144E-07"
+        iyy="0.00017063"
+        iyz="-5.4041E-11"
+        izz="0.00011099" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.80784 0.84314 0.90588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tjark_inspection/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_to_base"
+    type="fixed">
+    <origin
+      xyz="0.16786 0.00034612 0.14562"
+      rpy="0 0 3.14" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+</robot>

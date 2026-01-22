@@ -1,0 +1,8 @@
+<?xml version="1.0"?>  
+<robot name="tjark_inspection" xmlns:xacro="http://ros.org/wiki/xacro"> 
+    <xacro:include filename="$(find tjark_inspection)/urdf/tjark_inspection.urdf" /> 
+    <xacro:include filename="$(find tjark_inspection)/urdf/tjark_inspection.sensor.xacro" /> 
+    <xacro:include filename="$(find tjark_inspection)/urdf/tjark_inspection.motor.xacro" /> 
+    <xacro:include filename="$(find tjark_inspection)/urdf/tjark_inspection.controller.xacro" /> 
+    <xacro:include filename="$(find tjark_inspection)/urdf/tjark_inspection.color.xacro" /> 
+</robot>
