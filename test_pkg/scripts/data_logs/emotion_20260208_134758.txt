@@ -1,2 +1,0 @@
-Time, Angry, Disgust, Scared, Happy, Sad, Surprised, Neutral
-13:48:00, 6.35%, 0.10%, 1.15%, 1.46%, 6.09%, 0.04%, 84.82%
