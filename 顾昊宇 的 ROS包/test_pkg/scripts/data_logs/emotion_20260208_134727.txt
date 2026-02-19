@@ -1,1 +1,0 @@
-Time, Angry, Disgust, Scared, Happy, Sad, Surprised, Neutral
